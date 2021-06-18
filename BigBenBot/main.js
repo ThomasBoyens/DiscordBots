@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
-const ytdl = require('ytdl-core');
+const config = require('./config.json');
+const fs = require('fs');
 
 const client = new Discord.Client();
 
 const prefix = '~';
-
-const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
@@ -49,4 +48,4 @@ client.on('message', message => {
 });
 
 
-client.login('ODU1NDU2NDkyOTI0NTY3NTgy.YMyv8Q.-acqUfnZMOIt9mArwl2_cXi4RWk');
+client.login(config.token);
